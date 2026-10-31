@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
+import { useAutomationFlows } from '../../hooks/useAutomationFlows';
 import {
   Sparkles,
   BellRing,
@@ -27,29 +28,19 @@ export const AutomationCenterView: React.FC = () => {
     ? Math.round((plans.reduce((sum, plan) => sum + plan.basePrice, 0) / plans.length) * 100) / 100
     : 0;
 
-  const flows = [
-    {
-      title: 'Smart renewal nudges',
-      description: 'Notify customers before renewal and offer swaps using usage patterns.',
-      enabled: true,
-      value: `${active} active contracts`,
-      accent: '#60A5FA',
-    },
-    {
-      title: 'Collections risk guardrail',
-      description: 'Escalate unpaid balances when invoices age beyond the payment terms.',
-      enabled: true,
-      value: `${overdue} overdue accounts`,
-      accent: '#F59E0B',
-    },
-    {
-      title: 'Savings / upsell suggestions',
-      description: 'Recommend product bundles and plan upgrades based on customer usage.',
-      enabled: false,
-      value: `Avg plan: $${avgDiscount.toLocaleString()}`,
-      accent: '#34D399',
-    },
-  ];
+  const { flows: savedFlows, loading: flowsLoading, error: flowsError, setFlowEnabled } = useAutomationFlows();
+
+  const flowMeta: Record<string, { value: string; accent: string }> = {
+    'smart-renewal-nudges': { value: `${active} active contracts`, accent: '#60A5FA' },
+    'collections-risk-guardrail': { value: `${overdue} overdue accounts`, accent: '#F59E0B' },
+    'upsell-suggestions': { value: `Avg plan: ${avgDiscount.toLocaleString()}`, accent: '#34D399' },
+  };
+
+  const flows = savedFlows.map((flow) => ({
+    ...flow,
+    value: flowMeta[flow.key]?.value ?? '',
+    accent: flowMeta[flow.key]?.accent ?? '#60A5FA',
+  }));
 
   const tasks = [
     {
@@ -122,16 +113,26 @@ export const AutomationCenterView: React.FC = () => {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1rem' }}>
+        {flowsLoading && <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Loading automation flows...</div>}
+        {flowsError && (
+          <div style={{ color: '#FCA5A5', fontSize: '0.85rem' }} role="alert">{flowsError}</div>
+        )}
         {flows.map((flow) => (
-          <div key={flow.title} className="glass-panel" style={{ padding: '1.25rem' }}>
+          <div key={flow.key} className="glass-panel" style={{ padding: '1.25rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
               <div style={{ width: '3rem', height: '3rem', borderRadius: '12px', background: `${flow.accent}2f`, display:'flex', alignItems:'center', justifyContent:'center' }}>
                 <Gauge size={18} color={flow.accent} />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: flow.enabled ? 'rgba(52, 211, 153, 0.12)' : 'rgba(148, 163, 184, 0.14)', border: `1px solid ${flow.enabled ? 'rgba(52, 211, 153, 0.4)' : 'rgba(148, 163, 184, 0.28)'}`, padding: '0.3rem 0.55rem', borderRadius: '999px', color: flow.enabled ? '#A7F3D0' : 'var(--text-muted)' }}>
+              <button
+                type="button"
+                aria-pressed={flow.enabled}
+                onClick={() => setFlowEnabled(flow.key, !flow.enabled)}
+                className="btn btn-sm"
+                style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: flow.enabled ? 'rgba(52, 211, 153, 0.12)' : 'rgba(148, 163, 184, 0.14)', border: `1px solid ${flow.enabled ? 'rgba(52, 211, 153, 0.4)' : 'rgba(148, 163, 184, 0.28)'}`, padding: '0.3rem 0.65rem', borderRadius: '999px', color: flow.enabled ? '#A7F3D0' : 'var(--text-muted)' }}
+              >
                 {flow.enabled ? <Check size={14} /> : null}
                 <span style={{ fontSize: '0.72rem', fontWeight: 700 }}>{flow.enabled ? 'Enabled' : 'Paused'}</span>
-              </div>
+              </button>
             </div>
 
             <h3 style={{ margin: '1rem 0 0.4rem', fontSize: '1.05rem', fontWeight: 700 }}>{flow.title}</h3>

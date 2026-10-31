@@ -15,6 +15,7 @@ import {
   User,
   ShieldCheck,
   LifeBuoy,
+  Sparkles,
 } from 'lucide-react';
 
 export type NavTab =
@@ -139,6 +140,29 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 >
                   <LayoutDashboard size={17} />
                   <span>Finance Dashboard</span>
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('automation-center')}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    width: '100%',
+                    padding: '0.6rem 0.75rem',
+                    borderRadius: 'var(--radius-md)',
+                    background: activeTab === 'automation-center' ? 'var(--primary-gradient)' : 'transparent',
+                    color: activeTab === 'automation-center' ? '#FFFFFF' : 'var(--text-secondary)',
+                    border: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.875rem',
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    boxShadow: activeTab === 'automation-center' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
+                  }}
+                >
+                  <Sparkles size={17} />
+                  <span>Automation Center</span>
                 </button>
 
                 <button
