@@ -92,7 +92,7 @@ export const BillingRunView: React.FC = () => {
         }}>
           <div>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Zap size={22} color="#818CF8" />
+              <Zap size={22} color="#60A5FA" />
               <span>Billing Run Simulator</span>
             </h2>
             <p style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)' }}>
@@ -102,7 +102,7 @@ export const BillingRunView: React.FC = () => {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg-elevated)', padding: '0.4rem 0.8rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}>
-              <Calendar size={16} color="#818CF8" />
+              <Calendar size={16} color="#60A5FA" />
               <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Simulate Date:</span>
               <input
                 type="date"
@@ -162,7 +162,7 @@ export const BillingRunView: React.FC = () => {
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
               Duplicate Safeguard
             </div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, marginTop: '0.25rem', color: '#818CF8' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, marginTop: '0.25rem', color: '#60A5FA' }}>
               {alreadyBilledCount} Skipped
             </div>
             <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>
@@ -226,14 +226,14 @@ export const BillingRunView: React.FC = () => {
                 subsWithStatus.map(({ sub, alreadyBilled, periodStart }) => (
                   <tr key={sub.id}>
                     <td>
-                      <span style={{ fontWeight: 700, color: '#818CF8' }}>{sub.subscriptionNumber}</span>
+                      <span style={{ fontWeight: 700, color: '#60A5FA' }}>{sub.subscriptionNumber}</span>
                     </td>
                     <td>
                       <div style={{ fontWeight: 600 }}>{sub.customerName}</div>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{sub.customerCompany}</div>
                     </td>
                     <td>
-                      <span style={{ textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: 700, color: '#A5B4FC' }}>
+                      <span style={{ textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: 700, color: '#93C5FD' }}>
                         {sub.planName}
                       </span>
                     </td>
@@ -249,11 +249,11 @@ export const BillingRunView: React.FC = () => {
                           display: 'inline-flex',
                           alignItems: 'center',
                           gap: '0.35rem',
-                          color: '#818CF8',
+                          color: '#60A5FA',
                           fontSize: '0.75rem',
                           fontWeight: 700,
                           padding: '0.2rem 0.5rem',
-                          background: 'rgba(99, 102, 241, 0.15)',
+                          background: 'rgba(59, 130, 246, 0.15)',
                           borderRadius: '4px',
                         }}>
                           <CheckCircle2 size={13} /> Already Billed (Protected)

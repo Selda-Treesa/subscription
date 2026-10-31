@@ -136,7 +136,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, onOpen
           </h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             Real-time MRR, recurring receivables, cash flow and overdue collection telemetry as of{' '}
-            <strong style={{ color: '#818CF8' }}>{simulatedDate}</strong>.
+            <strong style={{ color: '#60A5FA' }}>{simulatedDate}</strong>.
           </p>
         </div>
 
@@ -198,15 +198,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, onOpen
             width: '80px',
             height: '80px',
             borderRadius: '50%',
-            background: 'rgba(99, 102, 241, 0.15)',
+            background: 'rgba(59, 130, 246, 0.15)',
             filter: 'blur(20px)',
           }} />
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
               Monthly Recurring (MRR)
             </span>
-            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(99, 102, 241, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <TrendingUp size={16} color="#818CF8" />
+            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(59, 130, 246, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <TrendingUp size={16} color="#60A5FA" />
             </div>
           </div>
           <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.02em' }}>
@@ -492,7 +492,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, onOpen
                 return (
                   <tr key={sub.id}>
                     <td>
-                      <span style={{ fontWeight: 700, color: '#818CF8' }}>{sub.subscriptionNumber}</span>
+                      <span style={{ fontWeight: 700, color: '#60A5FA' }}>{sub.subscriptionNumber}</span>
                     </td>
                     <td>
                       <div style={{ fontWeight: 600 }}>{sub.customerName}</div>

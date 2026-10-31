@@ -29,7 +29,8 @@ export type NavTab =
   | 'templates'
   | 'discounts-taxes'
   | 'staff-management'
-  | 'customer-portal';
+  | 'customer-portal'
+  | 'automation-center';
 
 interface SidebarProps {
   activeTab: NavTab;
@@ -94,7 +95,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                   cursor: 'pointer',
                   textAlign: 'left',
                   transition: 'all 0.15s ease',
-                  boxShadow: activeTab === 'customer-portal' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                  boxShadow: activeTab === 'customer-portal' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                 }}
               >
                 <User size={18} />
@@ -133,7 +134,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'dashboard' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'dashboard' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <LayoutDashboard size={17} />
@@ -156,7 +157,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'subscriptions' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'subscriptions' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -193,7 +194,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'invoices' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'invoices' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <FileText size={17} />
@@ -216,7 +217,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'billing-run' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'billing-run' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <Zap size={17} />
@@ -239,7 +240,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'payments' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'payments' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <CreditCard size={17} />
@@ -262,7 +263,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'overdue-chaser' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'overdue-chaser' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -314,7 +315,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'products' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'products' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <Package size={17} />
@@ -337,7 +338,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'plans' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'plans' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <CalendarDays size={17} />
@@ -360,7 +361,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'templates' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'templates' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <FileCheck2 size={17} />
@@ -398,7 +399,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     fontSize: '0.875rem',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    boxShadow: activeTab === 'discounts-taxes' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                    boxShadow: activeTab === 'discounts-taxes' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                   }}
                 >
                   <Percent size={17} />
@@ -422,7 +423,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                       fontSize: '0.875rem',
                       cursor: 'pointer',
                       textAlign: 'left',
-                      boxShadow: activeTab === 'staff-management' ? '0 4px 12px rgba(99, 102, 241, 0.35)' : 'none',
+                      boxShadow: activeTab === 'staff-management' ? '0 4px 12px rgba(59, 130, 246, 0.35)' : 'none',
                     }}
                   >
                     <UserCheck size={17} />

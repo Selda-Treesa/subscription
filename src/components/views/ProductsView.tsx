@@ -192,8 +192,8 @@ export const ProductsView: React.FC = () => {
                       textTransform: 'uppercase',
                       padding: '0.2rem 0.5rem',
                       borderRadius: '4px',
-                      background: prod.isAddon ? 'rgba(236, 72, 153, 0.2)' : 'rgba(99, 102, 241, 0.2)',
-                      color: prod.isAddon ? '#F472B6' : '#818CF8',
+                      background: prod.isAddon ? 'rgba(45, 212, 191, 0.2)' : 'rgba(59, 130, 246, 0.2)',
+                      color: prod.isAddon ? '#2DD4BF' : '#60A5FA',
                       letterSpacing: '0.04em',
                     }}>
                       {prod.type} {prod.isAddon ? '• Customer Add-on' : ''}
@@ -253,7 +253,7 @@ export const ProductsView: React.FC = () => {
                           }}
                         >
                           <span>{v.name} ({v.attributeName})</span>
-                          <span style={{ fontWeight: 700, color: v.priceModifier > 0 ? '#818CF8' : 'var(--text-muted)' }}>
+                          <span style={{ fontWeight: 700, color: v.priceModifier > 0 ? '#60A5FA' : 'var(--text-muted)' }}>
                             {v.priceModifier > 0 ? `+$${v.priceModifier}` : 'Standard (+$0)'}
                           </span>
                         </div>

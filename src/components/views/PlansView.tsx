@@ -142,7 +142,7 @@ export const PlansView: React.FC = () => {
                   borderRadius: '9999px',
                   background:
                     plan.billingFrequency === 'yearly'
-                      ? 'rgba(139, 92, 246, 0.2)'
+                      ? 'rgba(20, 184, 166, 0.2)'
                       : plan.billingFrequency === 'monthly'
                       ? 'rgba(59, 130, 246, 0.2)'
                       : plan.billingFrequency === 'weekly'
@@ -150,7 +150,7 @@ export const PlansView: React.FC = () => {
                       : 'rgba(245, 158, 11, 0.2)',
                   color:
                     plan.billingFrequency === 'yearly'
-                      ? '#A78BFA'
+                      ? '#5EEAD4'
                       : plan.billingFrequency === 'monthly'
                       ? '#60A5FA'
                       : plan.billingFrequency === 'weekly'
@@ -377,7 +377,7 @@ export const PlansView: React.FC = () => {
                 flexDirection: 'column',
                 gap: '0.75rem',
               }}>
-                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#A5B4FC', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#93C5FD', textTransform: 'uppercase' }}>
                   Plan Policy Rules (Decided Plan by Plan):
                 </div>
 

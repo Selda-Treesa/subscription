@@ -109,7 +109,7 @@ export const StaffManagementView: React.FC = () => {
                       <div>
                         <div style={{ fontWeight: 700 }}>{member.name}</div>
                         {member.id === currentUser.id && (
-                          <span style={{ fontSize: '0.65rem', color: '#818CF8' }}>(You)</span>
+                          <span style={{ fontSize: '0.65rem', color: '#60A5FA' }}>(You)</span>
                         )}
                       </div>
                     </div>
@@ -122,8 +122,8 @@ export const StaffManagementView: React.FC = () => {
                       fontSize: '0.75rem',
                       fontWeight: 700,
                       textTransform: 'uppercase',
-                      background: member.role === 'admin' ? 'rgba(236, 72, 153, 0.2)' : 'rgba(99, 102, 241, 0.2)',
-                      color: member.role === 'admin' ? '#F472B6' : '#818CF8',
+                      background: member.role === 'admin' ? 'rgba(45, 212, 191, 0.2)' : 'rgba(59, 130, 246, 0.2)',
+                      color: member.role === 'admin' ? '#2DD4BF' : '#60A5FA',
                     }}>
                       {member.role}
                     </span>

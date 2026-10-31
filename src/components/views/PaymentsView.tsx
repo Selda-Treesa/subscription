@@ -197,7 +197,7 @@ export const PaymentsView: React.FC<PaymentsViewProps> = ({
                       <span style={{ fontWeight: 700, color: '#34D399' }}>{p.paymentNumber}</span>
                     </td>
                     <td>
-                      <span style={{ fontWeight: 600, color: '#818CF8' }}>{p.invoiceNumber}</span>
+                      <span style={{ fontWeight: 600, color: '#60A5FA' }}>{p.invoiceNumber}</span>
                     </td>
                     <td>
                       <div style={{ fontWeight: 600 }}>{p.customerName}</div>
@@ -207,8 +207,8 @@ export const PaymentsView: React.FC<PaymentsViewProps> = ({
                       <span style={{
                         padding: '0.2rem 0.5rem',
                         borderRadius: '4px',
-                        background: 'rgba(99, 102, 241, 0.15)',
-                        color: '#A5B4FC',
+                        background: 'rgba(59, 130, 246, 0.15)',
+                        color: '#93C5FD',
                         fontSize: '0.75rem',
                         fontWeight: 600,
                       }}>

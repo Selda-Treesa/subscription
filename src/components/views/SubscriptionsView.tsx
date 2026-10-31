@@ -265,9 +265,9 @@ export const SubscriptionsView: React.FC = () => {
               key={st}
               onClick={() => setStatusFilter(st)}
               style={{
-                background: statusFilter === st ? 'rgba(99, 102, 241, 0.2)' : 'transparent',
-                border: statusFilter === st ? '1px solid rgba(99, 102, 241, 0.4)' : '1px solid transparent',
-                color: statusFilter === st ? '#818CF8' : 'var(--text-muted)',
+                background: statusFilter === st ? 'rgba(59, 130, 246, 0.2)' : 'transparent',
+                border: statusFilter === st ? '1px solid rgba(59, 130, 246, 0.4)' : '1px solid transparent',
+                color: statusFilter === st ? '#60A5FA' : 'var(--text-muted)',
                 fontWeight: 600,
                 fontSize: '0.75rem',
                 textTransform: 'uppercase',
@@ -315,7 +315,7 @@ export const SubscriptionsView: React.FC = () => {
                       onClick={() => setSelectedSub(sub)}
                     >
                       <td>
-                        <span style={{ fontWeight: 700, color: '#818CF8' }}>
+                        <span style={{ fontWeight: 700, color: '#60A5FA' }}>
                           {sub.subscriptionNumber}
                         </span>
                         {sub.quotationTemplateId && (
@@ -506,7 +506,7 @@ export const SubscriptionsView: React.FC = () => {
 
                 <div style={{ background: 'var(--bg-elevated)', padding: '0.875rem', borderRadius: 'var(--radius-md)' }}>
                   <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Recurring Amount</div>
-                  <div style={{ fontWeight: 800, fontSize: '1.15rem', color: '#818CF8', marginTop: '0.25rem' }}>
+                  <div style={{ fontWeight: 800, fontSize: '1.15rem', color: '#60A5FA', marginTop: '0.25rem' }}>
                     ${selectedSub.totalAmount.toLocaleString()}
                   </div>
                   <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Taxes: ${selectedSub.taxTotal}</div>
@@ -533,7 +533,7 @@ export const SubscriptionsView: React.FC = () => {
                         <tr key={line.id}>
                           <td style={{ fontWeight: 600 }}>{line.productName}</td>
                           <td>
-                            <span style={{ fontSize: '0.8rem', color: line.variantName ? '#818CF8' : 'var(--text-muted)' }}>
+                            <span style={{ fontSize: '0.8rem', color: line.variantName ? '#60A5FA' : 'var(--text-muted)' }}>
                               {line.variantName || 'Standard'}
                             </span>
                           </td>
@@ -567,14 +567,14 @@ export const SubscriptionsView: React.FC = () => {
                       style={{
                         padding: '0.6rem 0.75rem',
                         background: 'rgba(255,255,255,0.02)',
-                        borderLeft: '2px solid #6366F1',
+                        borderLeft: '2px solid #2563EB',
                         borderRadius: '0 6px 6px 0',
                         fontSize: '0.8rem',
                       }}
                     >
                       <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '0.7rem' }}>
                         <span>{hist.date} &bull; {hist.actor}</span>
-                        <span style={{ fontWeight: 700, color: '#A5B4FC' }}>{hist.action}</span>
+                        <span style={{ fontWeight: 700, color: '#93C5FD' }}>{hist.action}</span>
                       </div>
                       {hist.notes && <div style={{ marginTop: '0.25rem', color: 'var(--text-main)' }}>{hist.notes}</div>}
                     </div>
@@ -615,11 +615,11 @@ export const SubscriptionsView: React.FC = () => {
               {/* Template Quick Loader */}
               <div style={{
                 padding: '0.875rem',
-                background: 'rgba(99, 102, 241, 0.1)',
-                border: '1px solid rgba(99, 102, 241, 0.25)',
+                background: 'rgba(59, 130, 246, 0.1)',
+                border: '1px solid rgba(59, 130, 246, 0.25)',
                 borderRadius: 'var(--radius-md)',
               }}>
-                <label className="form-label" style={{ color: '#818CF8' }}>
+                <label className="form-label" style={{ color: '#60A5FA' }}>
                   🚀 Start from Quotation Template (Optional)
                 </label>
                 <select

@@ -90,9 +90,9 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
               key={st}
               onClick={() => setStatusFilter(st)}
               style={{
-                background: statusFilter === st ? 'rgba(99, 102, 241, 0.2)' : 'transparent',
-                border: statusFilter === st ? '1px solid rgba(99, 102, 241, 0.4)' : '1px solid transparent',
-                color: statusFilter === st ? '#818CF8' : 'var(--text-muted)',
+                background: statusFilter === st ? 'rgba(59, 130, 246, 0.2)' : 'transparent',
+                border: statusFilter === st ? '1px solid rgba(59, 130, 246, 0.4)' : '1px solid transparent',
+                color: statusFilter === st ? '#60A5FA' : 'var(--text-muted)',
                 fontWeight: 600,
                 fontSize: '0.75rem',
                 textTransform: 'uppercase',
@@ -139,7 +139,7 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
                     onClick={() => setSelectedInvoice(inv)}
                   >
                     <td>
-                      <span style={{ fontWeight: 700, color: '#818CF8' }}>
+                      <span style={{ fontWeight: 700, color: '#60A5FA' }}>
                         {inv.invoiceNumber}
                       </span>
                       {inv.deliveryStatus === 'sent' && (
@@ -292,7 +292,7 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
                 <button
                   onClick={handlePrint}
                   style={{
-                    background: '#6366F1',
+                    background: '#2563EB',
                     color: '#FFF',
                     border: 'none',
                     padding: '0.45rem 0.9rem',
@@ -327,7 +327,7 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
             {/* Corporate Invoice Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
               <div>
-                <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#4F46E5', letterSpacing: '-0.02em' }}>
+                <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#1D4ED8', letterSpacing: '-0.02em' }}>
                   ⚡ Brightloop Software
                 </div>
                 <div style={{ fontSize: '0.8125rem', color: '#64748B', marginTop: '0.25rem', lineHeight: 1.4 }}>
@@ -342,7 +342,7 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
                 <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A' }}>
                   INVOICE
                 </div>
-                <div style={{ fontSize: '1rem', fontWeight: 700, color: '#6366F1' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 700, color: '#2563EB' }}>
                   {selectedInvoice.invoiceNumber}
                 </div>
                 <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '0.35rem' }}>
@@ -417,7 +417,7 @@ export const InvoicesView: React.FC<InvoicesViewProps> = ({ onRecordPaymentForIn
                     <td style={{ padding: '0.875rem 0.5rem' }}>
                       <div style={{ fontWeight: 600, color: '#0F172A' }}>{line.productName}</div>
                       {line.variantName && (
-                        <div style={{ fontSize: '0.75rem', color: '#6366F1' }}>Variant: {line.variantName}</div>
+                        <div style={{ fontSize: '0.75rem', color: '#2563EB' }}>Variant: {line.variantName}</div>
                       )}
                     </td>
                     <td style={{ padding: '0.875rem 0.5rem', color: '#334155' }}>{line.quantity}</td>

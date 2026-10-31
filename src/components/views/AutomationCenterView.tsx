@@ -33,7 +33,7 @@ export const AutomationCenterView: React.FC = () => {
       description: 'Notify customers before renewal and offer swaps using usage patterns.',
       enabled: true,
       value: `${active} active contracts`,
-      accent: '#818CF8',
+      accent: '#60A5FA',
     },
     {
       title: 'Collections risk guardrail',
@@ -74,7 +74,7 @@ export const AutomationCenterView: React.FC = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-            <div style={{ width: '2.25rem', height: '2.25rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(129, 140, 248, 0.2)', color: '#A5B4FC' }}>
+            <div style={{ width: '2.25rem', height: '2.25rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(96, 165, 250, 0.2)', color: '#93C5FD' }}>
               <Sparkles size={18} />
             </div>
             <h1 style={{ margin: 0, fontSize: '1.8rem', fontWeight: 800 }}>Automation Center</h1>

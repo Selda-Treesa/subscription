@@ -217,7 +217,7 @@ export const DiscountsTaxesView: React.FC = () => {
                     return (
                       <tr key={disc.id}>
                         <td>
-                          <div style={{ fontWeight: 800, color: '#818CF8' }}>{disc.code}</div>
+                          <div style={{ fontWeight: 800, color: '#60A5FA' }}>{disc.code}</div>
                           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{disc.name}</div>
                         </td>
                         <td>
@@ -251,7 +251,7 @@ export const DiscountsTaxesView: React.FC = () => {
                             <div style={{
                               height: '100%',
                               width: `${Math.min(100, (disc.usedCount / disc.maxUses) * 100)}%`,
-                              background: isExhausted ? '#EF4444' : '#6366F1',
+                              background: isExhausted ? '#EF4444' : '#2563EB',
                             }} />
                           </div>
                         </td>
@@ -259,8 +259,8 @@ export const DiscountsTaxesView: React.FC = () => {
                           <span style={{
                             padding: '0.2rem 0.5rem',
                             borderRadius: '4px',
-                            background: disc.scope === 'subscription' ? 'rgba(99, 102, 241, 0.15)' : 'rgba(236, 72, 153, 0.15)',
-                            color: disc.scope === 'subscription' ? '#A5B4FC' : '#F472B6',
+                            background: disc.scope === 'subscription' ? 'rgba(59, 130, 246, 0.15)' : 'rgba(45, 212, 191, 0.15)',
+                            color: disc.scope === 'subscription' ? '#93C5FD' : '#2DD4BF',
                             fontSize: '0.75rem',
                             fontWeight: 700,
                             textTransform: 'capitalize',

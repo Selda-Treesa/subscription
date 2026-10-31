@@ -296,7 +296,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setMode('login');
                     setStatusMsg(null);
                   }}
-                  style={{ background: 'transparent', border: 'none', color: '#818CF8', fontWeight: 600, cursor: 'pointer' }}
+                  style={{ background: 'transparent', border: 'none', color: '#60A5FA', fontWeight: 600, cursor: 'pointer' }}
                 >
                   Log In
                 </button>
@@ -332,7 +332,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       setMode('forgot');
                       setStatusMsg(null);
                     }}
-                    style={{ background: 'transparent', border: 'none', color: '#818CF8', fontSize: '0.75rem', cursor: 'pointer' }}
+                    style={{ background: 'transparent', border: 'none', color: '#60A5FA', fontSize: '0.75rem', cursor: 'pointer' }}
                   >
                     Forgot Password?
                   </button>
@@ -368,7 +368,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setMode('signup');
                     setStatusMsg(null);
                   }}
-                  style={{ background: 'transparent', border: 'none', color: '#818CF8', fontWeight: 600, cursor: 'pointer' }}
+                  style={{ background: 'transparent', border: 'none', color: '#60A5FA', fontWeight: 600, cursor: 'pointer' }}
                 >
                   Create an account
                 </button>
@@ -412,7 +412,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setMode('login');
                     setStatusMsg(null);
                   }}
-                  style={{ background: 'transparent', border: 'none', color: '#818CF8', fontWeight: 600, cursor: 'pointer' }}
+                  style={{ background: 'transparent', border: 'none', color: '#60A5FA', fontWeight: 600, cursor: 'pointer' }}
                 >
                   Back to Sign In
                 </button>

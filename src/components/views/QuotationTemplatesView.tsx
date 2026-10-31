@@ -148,12 +148,12 @@ export const QuotationTemplatesView: React.FC<QuotationTemplatesViewProps> = ({
             <div key={tmpl.id} className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#818CF8', fontSize: '0.75rem', fontWeight: 700 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#60A5FA', fontSize: '0.75rem', fontWeight: 700 }}>
                     <Clock size={14} />
                     <span>Valid for {tmpl.validityDays} Days</span>
                   </div>
                   {plan && (
-                    <span style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', borderRadius: '4px', background: 'rgba(99, 102, 241, 0.2)', color: '#A5B4FC', fontWeight: 600 }}>
+                    <span style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', borderRadius: '4px', background: 'rgba(59, 130, 246, 0.2)', color: '#93C5FD', fontWeight: 600 }}>
                       {plan.name}
                     </span>
                   )}
@@ -179,7 +179,7 @@ export const QuotationTemplatesView: React.FC<QuotationTemplatesViewProps> = ({
                         <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem' }}>
                           <span style={{ color: '#FFF' }}>
                             {l.quantity}x {prod?.name || 'Product'}{' '}
-                            {variant && <span style={{ color: '#818CF8' }}>({variant.name})</span>}
+                            {variant && <span style={{ color: '#60A5FA' }}>({variant.name})</span>}
                           </span>
                           <span style={{ color: l.discountPercent > 0 ? '#34D399' : 'var(--text-muted)' }}>
                             {l.discountPercent > 0 ? `${l.discountPercent}% off` : 'Standard'}

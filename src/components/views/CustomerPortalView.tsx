@@ -113,7 +113,7 @@ export const CustomerPortalView: React.FC = () => {
           <img
             src={currentUser.avatar}
             alt={currentUser.name}
-            style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #818CF8' }}
+            style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #60A5FA' }}
           />
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
@@ -214,7 +214,7 @@ export const CustomerPortalView: React.FC = () => {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                        <span style={{ fontWeight: 800, fontSize: '1.3rem', color: '#818CF8' }}>
+                        <span style={{ fontWeight: 800, fontSize: '1.3rem', color: '#60A5FA' }}>
                           {sub.subscriptionNumber}
                         </span>
                         <span className={`badge badge-${sub.status}`}>
@@ -254,7 +254,7 @@ export const CustomerPortalView: React.FC = () => {
                               {line.quantity}x {line.productName}
                             </span>
                             {line.variantName && (
-                              <span style={{ marginLeft: '0.5rem', color: '#818CF8', fontSize: '0.75rem' }}>
+                              <span style={{ marginLeft: '0.5rem', color: '#60A5FA', fontSize: '0.75rem' }}>
                                 ({line.variantName})
                               </span>
                             )}
@@ -269,14 +269,14 @@ export const CustomerPortalView: React.FC = () => {
 
                   {/* Self-Service Add-on Switchboard */}
                   <div style={{
-                    background: 'rgba(99, 102, 241, 0.08)',
-                    border: '1px solid rgba(99, 102, 241, 0.25)',
+                    background: 'rgba(59, 130, 246, 0.08)',
+                    border: '1px solid rgba(59, 130, 246, 0.25)',
                     padding: '1.25rem',
                     borderRadius: 'var(--radius-md)',
                     marginBottom: '1.5rem',
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                      <Sparkles size={18} color="#818CF8" />
+                      <Sparkles size={18} color="#60A5FA" />
                       <h4 style={{ fontSize: '0.95rem', fontWeight: 700 }}>
                         Self-Service Add-on Switchboard (Instant Activation)
                       </h4>
@@ -397,7 +397,7 @@ export const CustomerPortalView: React.FC = () => {
                       {/* If policy disallows early close */}
                       {sub.status === 'active' && plan && !plan.policy.allowEarlyClose && (
                         <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                          <ShieldCheck size={14} color="#818CF8" /> Annual Contract (Early cancellation not permitted)
+                          <ShieldCheck size={14} color="#60A5FA" /> Annual Contract (Early cancellation not permitted)
                         </span>
                       )}
                     </div>
@@ -443,7 +443,7 @@ export const CustomerPortalView: React.FC = () => {
                 ) : (
                   myInvoices.map((inv) => (
                     <tr key={inv.id}>
-                      <td style={{ fontWeight: 700, color: '#818CF8' }}>{inv.invoiceNumber}</td>
+                      <td style={{ fontWeight: 700, color: '#60A5FA' }}>{inv.invoiceNumber}</td>
                       <td>{inv.issueDate}</td>
                       <td>
                         <span style={{ color: inv.isOverdue ? '#F87171' : 'var(--text-main)', fontWeight: inv.isOverdue ? 700 : 500 }}>

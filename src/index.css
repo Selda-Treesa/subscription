@@ -2,28 +2,28 @@
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Color Palette - Premium Emerald Green */
-  --bg-main: #071a14;
-  --bg-sidebar: #041a15;
-  --bg-card: rgba(10, 27, 23, 0.74);
-  --bg-card-hover: rgba(16, 39, 33, 0.9);
-  --bg-card-solid: #0d221d;
-  --bg-elevated: #153a31;
-  --bg-input: #0b221c;
+  /* Color Palette - Slate Navy with Ocean Blue primary and Teal secondary */
+  --bg-main: #080d18;
+  --bg-sidebar: #0b1222;
+  --bg-card: rgba(15, 23, 42, 0.74);
+  --bg-card-hover: rgba(22, 32, 54, 0.9);
+  --bg-card-solid: #111a2d;
+  --bg-elevated: #1a2740;
+  --bg-input: #0e1a2e;
 
-  --border-subtle: rgba(167, 243, 208, 0.12);
-  --border-medium: rgba(167, 243, 208, 0.2);
-  --border-active: rgba(52, 211, 153, 0.52);
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-medium: rgba(148, 163, 184, 0.24);
+  --border-active: rgba(96, 165, 250, 0.55);
 
-  --primary: #34d399;
-  --primary-hover: #10b981;
-  --primary-glow: rgba(52, 211, 153, 0.25);
-  --primary-gradient: linear-gradient(135deg, #10b981 0%, #34d399 45%, #6ee7b7 100%);
-  --secondary-gradient: linear-gradient(135deg, #22c55e 0%, #86efac 100%);
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --primary-glow: rgba(59, 130, 246, 0.25);
+  --primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #38bdf8 100%);
+  --secondary-gradient: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
 
-  --text-main: #ecfdf5;
-  --text-secondary: #bbf7d0;
-  --text-muted: #7dd3a3;
+  --text-main: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
   --status-active-bg: rgba(16, 185, 129, 0.15);
   --status-active-text: #6ee7b7;
@@ -37,9 +37,9 @@
   --status-quote-text: #7dd3fc;
   --status-quote-border: rgba(14, 165, 233, 0.28);
 
-  --status-confirmed-bg: rgba(52, 211, 153, 0.12);
-  --status-confirmed-text: #a7f3d0;
-  --status-confirmed-border: rgba(52, 211, 153, 0.32);
+  --status-confirmed-bg: rgba(96, 165, 250, 0.12);
+  --status-confirmed-text: #bfdbfe;
+  --status-confirmed-border: rgba(96, 165, 250, 0.32);
 
   --status-paused-bg: rgba(245, 158, 11, 0.12);
   --status-paused-text: #fbbf24;
@@ -52,7 +52,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.28);
   --shadow-md: 0 10px 28px -18px rgba(2, 12, 10, 0.7);
   --shadow-lg: 0 20px 38px -20px rgba(2, 16, 12, 0.8);
-  --shadow-glow: 0 0 30px rgba(52, 211, 153, 0.18);
+  --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.18);
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -75,9 +75,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image:
-    radial-gradient(at 10% 20%, rgba(52, 211, 153, 0.12) 0px, transparent 35%),
-    radial-gradient(at 80% 10%, rgba(22, 163, 74, 0.1) 0px, transparent 32%),
-    radial-gradient(at 50% 90%, rgba(16, 185, 129, 0.09) 0px, transparent 50%);
+    radial-gradient(at 10% 20%, rgba(59, 130, 246, 0.14) 0px, transparent 35%),
+    radial-gradient(at 80% 10%, rgba(20, 184, 166, 0.1) 0px, transparent 32%),
+    radial-gradient(at 50% 90%, rgba(56, 189, 248, 0.08) 0px, transparent 50%);
   background-attachment: fixed;
 }
 
@@ -127,11 +127,11 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-main);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f5d4b;
+  background: #1e3a5f;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2e7d63;
+  background: #2d5a8f;
 }
 
 /* Interactive Buttons */
@@ -154,12 +154,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background: var(--primary-gradient);
   color: #f0fdf4;
-  box-shadow: 0 10px 25px rgba(52, 211, 153, 0.22);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.22);
 }
 .btn-primary:hover {
   opacity: 0.97;
   transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(52, 211, 153, 0.3);
+  box-shadow: 0 14px 28px rgba(59, 130, 246, 0.3);
 }
 
 .btn-secondary {
@@ -174,14 +174,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-accent {
-  background: rgba(52, 211, 153, 0.12);
-  color: #86efac;
-  border-color: rgba(52, 211, 153, 0.28);
+  background: rgba(96, 165, 250, 0.12);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.28);
 }
 .btn-accent:hover {
-  background: rgba(52, 211, 153, 0.2);
-  border-color: rgba(52, 211, 153, 0.48);
-  color: #bbf7d0;
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.48);
+  color: #bfdbfe;
 }
 
 .btn-danger {
@@ -308,14 +308,14 @@ h1, h2, h3, h4, h5, h6 {
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px var(--primary-glow);
-  background: #102c25;
+  background: #13213a;
 }
 
 /* Modals */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(3, 12, 10, 0.78);
+  background: rgba(4, 8, 16, 0.78);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .data-table th {
-  background: rgba(9, 28, 23, 0.9);
+  background: rgba(12, 20, 36, 0.9);
   color: var(--text-muted);
   font-weight: 600;
   font-size: 0.75rem;

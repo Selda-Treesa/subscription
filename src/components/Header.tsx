@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 14px rgba(99, 102, 241, 0.4)',
+            boxShadow: '0 4px 14px rgba(59, 130, 246, 0.4)',
           }}>
             <Zap size={22} color="#FFFFFF" />
           </div>
@@ -94,10 +94,10 @@ export const Header: React.FC<HeaderProps> = ({
                 fontSize: '0.65rem',
                 fontWeight: 700,
                 padding: '0.15rem 0.45rem',
-                background: 'rgba(99, 102, 241, 0.2)',
-                color: '#818CF8',
+                background: 'rgba(59, 130, 246, 0.2)',
+                color: '#60A5FA',
                 borderRadius: '4px',
-                border: '1px solid rgba(99, 102, 241, 0.3)',
+                border: '1px solid rgba(59, 130, 246, 0.3)',
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase',
               }}>
@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({
           borderRadius: 'var(--radius-md)',
           padding: '0.35rem 0.75rem',
         }}>
-          <Calendar size={16} color="#818CF8" />
+          <Calendar size={16} color="#60A5FA" />
           <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
             Billing Clock:
           </span>
@@ -245,7 +245,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div style={{ fontSize: '0.8125rem', fontWeight: 700 }}>
                 {currentUser.name}
               </div>
-              <div style={{ fontSize: '0.7rem', color: '#818CF8', textTransform: 'uppercase', fontWeight: 700 }}>
+              <div style={{ fontSize: '0.7rem', color: '#60A5FA', textTransform: 'uppercase', fontWeight: 700 }}>
                 {currentUser.role}
               </div>
             </div>
@@ -291,8 +291,8 @@ export const Header: React.FC<HeaderProps> = ({
                       gap: '0.6rem',
                       width: '100%',
                       padding: '0.5rem',
-                      background: u.id === currentUser.id ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
-                      border: u.id === currentUser.id ? '1px solid rgba(99, 102, 241, 0.3)' : '1px solid transparent',
+                      background: u.id === currentUser.id ? 'rgba(59, 130, 246, 0.15)' : 'transparent',
+                      border: u.id === currentUser.id ? '1px solid rgba(59, 130, 246, 0.3)' : '1px solid transparent',
                       borderRadius: 'var(--radius-md)',
                       color: '#FFFFFF',
                       cursor: 'pointer',
@@ -320,15 +320,15 @@ export const Header: React.FC<HeaderProps> = ({
                       borderRadius: '4px',
                       background:
                         u.role === 'admin'
-                          ? 'rgba(236, 72, 153, 0.2)'
+                          ? 'rgba(45, 212, 191, 0.2)'
                           : u.role === 'staff'
-                          ? 'rgba(99, 102, 241, 0.2)'
+                          ? 'rgba(59, 130, 246, 0.2)'
                           : 'rgba(16, 185, 129, 0.2)',
                       color:
                         u.role === 'admin'
-                          ? '#F472B6'
+                          ? '#2DD4BF'
                           : u.role === 'staff'
-                          ? '#818CF8'
+                          ? '#60A5FA'
                           : '#34D399',
                     }}>
                       {u.role}
@@ -351,7 +351,7 @@ export const Header: React.FC<HeaderProps> = ({
                     padding: '0.5rem',
                     background: 'transparent',
                     border: 'none',
-                    color: '#818CF8',
+                    color: '#60A5FA',
                     fontSize: '0.8rem',
                     fontWeight: 600,
                     cursor: 'pointer',
