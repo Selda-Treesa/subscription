@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Sidebar, NavTab } from './components/Sidebar';
 import { AuthModal } from './components/AuthModal';
 import { DashboardView } from './components/views/DashboardView';
+import { AutomationCenterView } from './components/views/AutomationCenterView';
 import { SubscriptionsView } from './components/views/SubscriptionsView';
 import { InvoicesView } from './components/views/InvoicesView';
 import { BillingRunView } from './components/views/BillingRunView';
@@ -71,6 +72,8 @@ const MainApp: React.FC = () => {
               onOpenBilling={() => setActiveTab('billing-run')}
             />
           )}
+
+          {activeTab === 'automation-center' && <AutomationCenterView />}
 
           {activeTab === 'subscriptions' && <SubscriptionsView />}
 
