@@ -12,18 +12,21 @@ import {
   Sparkles,
   CreditCard,
   PlusCircle,
+  Download,
 } from 'lucide-react';
 
 interface HeaderProps {
   onOpenNewQuote: () => void;
   onOpenBillingModal: () => void;
   onOpenAuthModal: () => void;
+  onOpenExportModal?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   onOpenNewQuote,
   onOpenBillingModal,
   onOpenAuthModal,
+  onOpenExportModal,
 }) => {
   const {
     currentUser,
@@ -204,6 +207,18 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Right: Quick Role Switcher, Current User & Auth */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
+        {/* Export Data Button */}
+        {onOpenExportModal && currentUser.role !== 'customer' && (
+          <button
+            onClick={onOpenExportModal}
+            title="Export Finance Data to CSV"
+            className="btn btn-secondary btn-sm"
+            style={{ gap: '0.35rem' }}
+          >
+            <Download size={13} color="#818CF8" />
+            <span>Export Data</span>
+          </button>
+        )}
         {/* Reset Demo Data Button */}
         <button
           onClick={() => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/Header';
 import { Sidebar, NavTab } from './components/Sidebar';
@@ -16,6 +16,8 @@ import { QuotationTemplatesView } from './components/views/QuotationTemplatesVie
 import { DiscountsTaxesView } from './components/views/DiscountsTaxesView';
 import { CustomerPortalView } from './components/views/CustomerPortalView';
 import { StaffManagementView } from './components/views/StaffManagementView';
+import { ExportModal } from './components/ExportModal';
+import { ToastContainer, ToastMessage } from './components/Toast';
 import { Invoice } from './types';
 
 const MainApp: React.FC = () => {
@@ -23,7 +25,19 @@ const MainApp: React.FC = () => {
 
   const [activeTab, setActiveTab] = useState<NavTab>('dashboard');
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [preselectedInvoiceForPayment, setPreselectedInvoiceForPayment] = useState<Invoice | null>(null);
+  const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  // Toast helper
+  const addToast = useCallback((type: ToastMessage['type'], title: string, message?: string) => {
+    const id = `toast-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`;
+    setToasts((prev) => [...prev.slice(-4), { id, type, title, message }]);
+  }, []);
+
+  const dismissToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
 
   // Automatically adapt default view based on user role
   useEffect(() => {
@@ -52,6 +66,7 @@ const MainApp: React.FC = () => {
         onOpenNewQuote={() => setActiveTab('subscriptions')}
         onOpenBillingModal={() => setActiveTab('billing-run')}
         onOpenAuthModal={() => setIsAuthModalOpen(true)}
+        onOpenExportModal={() => setIsExportModalOpen(true)}
       />
 
       {/* Main Body with Sidebar + Content View */}
@@ -115,6 +130,16 @@ const MainApp: React.FC = () => {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
       />
+
+      {/* Finance Data Export Hub Modal */}
+      <ExportModal
+        isOpen={isExportModalOpen}
+        onClose={() => setIsExportModalOpen(false)}
+        addToast={addToast}
+      />
+
+      {/* Toast Notifications */}
+      <ToastContainer toasts={toasts} onDismiss={dismissToast} />
     </div>
   );
 };

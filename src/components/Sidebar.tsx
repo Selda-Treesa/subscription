@@ -20,6 +20,7 @@ import {
 
 export type NavTab =
   | 'dashboard'
+  | 'automation-center'
   | 'subscriptions'
   | 'invoices'
   | 'billing-run'
